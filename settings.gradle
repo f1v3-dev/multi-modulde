@@ -17,3 +17,7 @@ rootProject.name = 'multi-module'
 include(
         "api"
 )
+include 'storage'
+include 'storage:db-main'
+findProject(':storage:db-main')?.name = 'db-main'
+
