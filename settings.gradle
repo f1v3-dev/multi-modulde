@@ -15,9 +15,8 @@ pluginManagement {
 rootProject.name = 'multi-module'
 
 include(
-        "api"
+        "api",
+        "storage:db-main",
+        "domain"
 )
-include 'storage'
-include 'storage:db-main'
-findProject(':storage:db-main')?.name = 'db-main'
 

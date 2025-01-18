@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
- * {class name}.
+ * Post Entity.
  *
  * @author 정승조
  * @version 2025. 01. 18.
@@ -27,9 +27,17 @@ public class PostEntity {
 
     private String content;
 
-    public PostEntity(String title, String content) {
+    public PostEntity(Long id, String title, String content) {
+        this.id = id;
         this.title = title;
         this.content = content;
     }
 
+    public static PostEntity from(Post post) {
+        return new PostEntity(post.getId(), post.getTitle(), post.getContent());
+    }
+
+    public Post toModel() {
+        return new Post(this.id, this.title, this.content);
+    }
 }
