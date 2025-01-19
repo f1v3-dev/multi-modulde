@@ -1,0 +1,5 @@
+# database configuration (h2)
+spring:
+  config:
+    import:
+      - database.yml

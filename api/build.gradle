@@ -1,6 +1,16 @@
+tasks.named("bootJar") {
+    enabled = true
+}
+
+tasks.named("jar") {
+    enabled = false
+}
+
 dependencies {
 
     // module
+    runtimeOnly project(':storage:db-main')
+    implementation project(':domain')
 
     // web
     implementation 'org.springframework.boot:spring-boot-starter-web'

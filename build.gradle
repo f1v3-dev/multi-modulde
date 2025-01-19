@@ -6,12 +6,10 @@ plugins {
 }
 
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
+    sourceCompatibility = javaVersion
 }
 
-
+// 모든 프로젝트에 설정
 allprojects {
 
     group = projectGroup
@@ -22,6 +20,7 @@ allprojects {
     }
 }
 
+// root Project 제외 모든 subProject 설정
 subprojects {
 
     apply {
