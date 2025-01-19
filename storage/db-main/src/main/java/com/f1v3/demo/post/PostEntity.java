@@ -1,6 +1,10 @@
 package com.f1v3.demo.post;
 
-import jakarta.persistence.*;
+import com.f1v3.demo.BaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Entity(name = "post")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class PostEntity {
+public class PostEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

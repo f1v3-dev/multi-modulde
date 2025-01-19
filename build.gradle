@@ -5,15 +5,12 @@ plugins {
     id 'io.spring.dependency-management' apply false
 }
 
-java {
-    sourceCompatibility = javaVersion
-}
-
 // 모든 프로젝트에 설정
 allprojects {
 
-    group = projectGroup
-    version = applicationVersion
+    group = "${projectGroup}"
+    version = "${applicationVersion}"
+    sourceCompatibility = project.javaVersion
 
     repositories {
         mavenCentral()
@@ -52,12 +49,11 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
-
-    tasks.named('bootJar') {
+    tasks.named("bootJar") {
         enabled = false
     }
 
-    tasks.named('jar') {
+    tasks.named("jar") {
         enabled = true
     }
 

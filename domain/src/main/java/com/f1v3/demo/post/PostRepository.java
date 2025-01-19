@@ -3,7 +3,7 @@ package com.f1v3.demo.post;
 import java.util.List;
 
 /**
- * Post Repository.
+ * Post Repository. (UseCase)
  *
  * @author 정승조
  * @version 2025. 01. 18.

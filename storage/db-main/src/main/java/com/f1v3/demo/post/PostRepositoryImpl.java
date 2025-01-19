@@ -1,5 +1,6 @@
 package com.f1v3.demo.post;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,13 +12,10 @@ import java.util.List;
  * @version 2025. 01. 18.
  */
 @Repository
+@RequiredArgsConstructor
 public class PostRepositoryImpl implements PostRepository {
 
     private final PostEntityRepository postEntityRepository;
-
-    public PostRepositoryImpl(PostEntityRepository postEntityRepository) {
-        this.postEntityRepository = postEntityRepository;
-    }
 
     @Override
     public void save(Post post) {

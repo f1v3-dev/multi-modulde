@@ -7,9 +7,8 @@ tasks.named("jar") {
 }
 
 dependencies {
-
     // module
-    runtimeOnly project(':storage:db-main')
+    runtimeOnly(project(':storage:db-main'))
     implementation project(':domain')
 
     // web
