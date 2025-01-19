@@ -18,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PostService {
 
+    // fixme: PostRepository Bean 주입이 안되네..
     private final PostRepository postRepository;
 
     public void save(PostCreate postCreate) {
